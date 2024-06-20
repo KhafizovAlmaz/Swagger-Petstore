@@ -1,4 +1,3 @@
-import pytest
 import allure
 from pages.base_page import BasePage
 from data.user_data import UserData
@@ -7,7 +6,7 @@ from data.user_data import UserData
 class UserPage(BasePage):
     data = UserData()
 
-    def test_post_create_user(self):
+    def test_post_create_user(self):  # Все тесты можно параметризовать, но было лень делать в этой реализации)
         with allure.step('Создание пользователя методом POST'):
             post_response = self.post_request(self.data.USER)
             assert post_response.status_code == 200

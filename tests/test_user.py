@@ -1,4 +1,3 @@
-import pytest
 import allure
 from pages.user_page import UserPage
 
